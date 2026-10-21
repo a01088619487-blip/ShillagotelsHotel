@@ -10,6 +10,7 @@ ul,
 li {
   list-style: none;
   color: #1c1c1c;
+
 }
 
 /* a리셋 */
@@ -17,6 +18,7 @@ a {
   text-decoration: none;
   color: inherit;
   /* inherit 색 부모 따라가긔 */
+
 }
 
 img {
@@ -27,7 +29,7 @@ img {
 /* 상단 */
 .header {
   width: 100%;
-  background-color: rgb(183, 254, 255);
+  background-color: rgb(215, 226, 226);
 }
 
 .header .inner {
@@ -36,9 +38,27 @@ img {
   margin: 0 auto;
   padding: 0 10px;
 }
+.home-link {
+  display: flex;
+  align-content: center;
+  gap: 2px;
+  font-size: 12px;
+}
+/* 홈,플러스 이미지 */
+.home-link img {
+  width: 14px;
+  height: 14px;
+  display: block;
+  margin-top: 3px;
+}
+/* 지구화살표이미지 */
+.lang-btn img{
+  width: 14px;
+  height: 14px;
+}
 
-/* 우측 상단*/
-.header-R {
+/* 좌측 상단*/
+.header-L {
   display: flex;
   /* background-color: rgb(204, 176, 165); */
   align-items: center;
@@ -47,38 +67,69 @@ img {
   gap: 10px;
 }
 
-.header-R .ut {
+.header-ul {
   display: flex;
 
   align-items: center;
-  gap: 10px;
+  gap: 16px;
   margin: 10px;
   padding: 15px;
+  font-size: 12px;
 }
-.header-R .up li a {
+.header .up li a {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #1c1c1c;
   font-size: 12px;
 }
-/* 좌측상단 */
 
+/* 로고 */
+.logoim {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 우측상단 */
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 3px; /* 아이콘과 글자 사이 간격 */
+  text-decoration: none;
+  font-size: 12px;
+}
 /* 이미지로 만든 화살표가 흰색이라 검정색으로 교체 */
 .header-ul > li > a img {
   filter: brightness(0);
   /* brightness 가 밝기! */
 }
 
+/* 다국어 서브메뉴 */
 .lang-sub {
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 90px;
   padding: 10px;
-  /* left: 20px; */
+  right: 1px;
   background-color: #f8f8f8;
   border: 1px solid #1c1c1c;
-  /* display: none;  */
+
+  display: none;
   /* 나중에 디스플레이 가리기 */
+  position: absolute;
+  font-size: 12px;
+}
+/* 메뉴 */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  font-size: 18px;
+}
+
+.lang-sub:hover{
+  display: flex;
 }
