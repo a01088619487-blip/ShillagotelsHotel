@@ -1,118 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 파비콘 -->
-    <link rel="icon" href="images/파비콘아이콘.png">
-    <title>신라호텔Test</title>
-    <!-- CSS  -->
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/visual.css">
-    <!-- JS -->   
-    <script src="js/main.js" defer></script>
-</head>
-<body>
-  <!-- 전체 레이아웃 -->
-    <div class="wrap">
-      <!-- Header -->
-        <header class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 파비콘 아이콘 넣기 -->
+    <link rel="icon" href="images/파비콘아이콘.png" />
+    <title>shillagotels</title>
+
+    <!-- css연결 -->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/visual.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!-- JS -->
+    <link rel="stylesheet" href="js/main.js" />
+  </head>
+
+  <body>
+    <!-- 전체 레이아웃 -->
+    <div class="wap">
+      <!-- 상단 -->
+      <div class="header">
         <div class="inner">
-          <!-- 1 Top  -->
-          <div class="header-top">
-            <!-- 2 Top (디자인 시안 좌측: 호텔로바로가기) -->
-            <ul class="ut">
-              <li><a href="#"><img src="images/images_imoje/home.png" alt="home"></a></li>
-              <li>|</li>
-              <li><a href="#">호텔로바로가기 +</a></li>
-            </ul>
-
-            <!-- logo img (디자인 시안 중앙) -->
-            <h1 class="logo">
-              <a href="#"><img src="images/파비콘아이콘.png" alt="신라호텔 로고"></a>
-            </h1>
-
-            <!-- 상단 오른쪽 유틸 메뉴 -->
-            <ul class="util">
-              <li><a href="#">로그인</a></li>
-              <li><a href="#">회원가입</a></li>
-              <li><a href="#">예약확인</a></li>
-              <li><a href="#">멤버십</a></li>
-              <li><a href="#">호텔찾기</a></li>
-              
-              <!-- 다국어 메뉴 -서브메뉴 -->
-              <li class="lang-menu">
-                <a href="#" class="lang-btn">한국어 ▾</a>
-                <ul class="lang-sub">
-                  <li><a href="#">English</a></li>
-                  <li><a href="#">日本語</a></li>
-                  <li><a href="#">简体中文</a></li>
-                </ul>
+          <!-- 좌측상단 -->
+          <div class="header-L">
+            <ul class="ut-list">
+              <li>
+                <a href="#">
+                  <img src="images/images_imoje/home.png" alt="home" />
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  >호텔바로가기
+                  <img src="images/images_imoje/addition.png" alt=""
+                /></a>
               </li>
             </ul>
+            <!-- 로고 -->
+            <div class="logoim">
+              <h1><img src="images/파비콘아이콘.png" alt="logo" /></h1>
+            </div>
+            <!-- 우측상단 -->
+            <div class="header-R">
+              <ul class="header-ul">
+                <li>
+                  <a href="#">로그인</a>
+                  <a href="#">회원가입</a>
+                  <a href="#">예약확인</a>
+                  <a href="#">멤버십</a>
+                  <a href="#">호텔찾기</a>
+                </li>
+                <!-- 다국어 메뉴섭섭 -->
+                <li class="lang-menu">
+                  <a href="#" class="lang-btn"
+                    ><img
+                      src="images/images_imoje/earth.png"
+                      alt="earth" />한국어
+                    <img src="images/images_imoje/down.png" alt="down"
+                  /></a>
+                  <ul class="lang-sub">
+                    <li><a href="#">한국어</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">日本語</a></li>
+                    <li><a href="#">中國語</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <!-- header-menu (메인 메뉴) -->
-          <nav class="header-menu">
-             <ul class="nav">
+          <!-- H 메뉴 -->
+          <nav class="menu">
+            <ul class="nav">
               <li><a href="#">호텔</a></li>
               <li><a href="#">오퍼</a></li>
               <li><a href="#">멤버십</a></li>
-             </ul>
+            </ul>
           </nav>
-
-          <!--새로 추가할 [예약하기 검색 바] 영역 시작! -->
-          <div class="booking-bar">
-            <!-- 1. 탭 버튼 (객실 / 다이닝) -->
-            <div class="booking-tabs">
-              <button type="button" class="tab-btn active">객실</button>
-              <button type="button" class="tab-btn">다이닝</button>
+          <!-- 예약창 -->
+          <div class="reservation">
+            <div class="rsr">
+              <button type="button" class="rsro-But">객실</button>
+              <button type="button" class="rsrx-But">다이닝</button>
             </div>
-
-            <!-- 2. 선택 옵션들 -->
-            <div class="booking-options">
-              <!-- 호텔 선택 -->
-              <div class="option-item hotel-select">
-                <span class="text">호텔을 선택해주세요</span>
-                <span class="icon">📍</span>
-              </div>
-
-              <!-- 다이닝 선택 -->
-              <div class="option-item dining-select">
-                <span class="text">다이닝을선택해주세요.</span>
-                <span class="icon">🛎️</span>
-              </div>
-
-              <!-- 인원 선택 -->
-              <div class="option-item guest-select">
-                <span class="text">선택 - 성인2 어린이0 유아0</span>
-                <span class="icon">👤</span>
-              </div>
-            </div>
-
-            <!-- 3. 예약하기 버튼 -->
-            <button type="button" class="reserve-btn">예약하기</button>
           </div>
-          <!-- 예약하기 검색 바 끝! -->
+        </div>
+      </div>
 
-        </div> 
-        <!-- 여기까지 header 끝! -->
-        </header>
-
-        <!-- Main 영역 (비디오 배너) -->
-        <main class="main-container">
-          <section class="visual">
-            <video autoplay loop muted playsinline>
-              <source src="images/배너 영상.mp4" type="video/mp4">
-            </video>
-          </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-        </footer>
+      <!-- 비주얼 -->
+      <!-- 메인 -->
+      <!-- 하단 -->
     </div>
-</body>
+  </body>
 </html>

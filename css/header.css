@@ -1,234 +1,84 @@
 /* 리셋 */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ul리셋 */
-ul,li{
-    list-style: none;
+ul,
+li {
+  list-style: none;
+  color: #1c1c1c;
 }
 
 /* a리셋 */
-a{
-    text-decoration: none;
-    color: inherit;
-    /* inherit 색 부모 따라가긔 */
+a {
+  text-decoration: none;
+  color: inherit;
+  /* inherit 색 부모 따라가긔 */
 }
 
-img{
-    
-    width: 100%;
-    display: block;
+img {
+  /* width: 100%; */
+  display: block;
 }
 
-
-/* 헤더 박스 (너비 맞춤 및 배경) */
+/* 상단 */
 .header {
   width: 100%;
-  /* background-color: #dd4e4e; */
-  border-bottom: 1px solid #eaeaea;
+  background-color: rgb(183, 254, 255);
 }
 
-/* 내부 콘텐츠를 잡아주는 박스 */
 .header .inner {
-  max-width: 1280px;
+  min-width: 779x;
+  padding: 20px;
   margin: 0 auto;
-  padding: 0 40px;
-  height: 100%;
+  padding: 0 10px;
 }
 
-/* Top  전체 영역 */
-.header-top {
+/* 우측 상단*/
+.header-R {
   display: flex;
-  align-items: center;
-  justify-content: space-between; 
-  height: 50px; 
-}
-
-/* 1 Top 호텔로바로가기 영역 */
-.header-top .ut {
-  display: flex;
-  align-items: center;
-  gap: 10px; 
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.header-top .ut li a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #1C1C1C;
-  font-size: 12px;
-}
-
-.header-top .ut img {
-    margin-top: 5px;
-    margin-right: -7px;
-  width: 20px; 
-  height: 20px;
-}
-
-/* 2Top 중앙 로고 영역 */
-.header-top .logo {
-width: 135px;
-  margin: 10px;
-  padding-top: 15px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  /* 중앙고정! */
-}
-
-.header-top .logo img {
-  height: 64px; 
-  display: block;
-}
-
-/* 3Top 우측 유틸 메뉴 영역  */
-.header-top .util {
-  display: flex;
-  align-items: center;
-  gap: 20px; 
-  list-style: none;
-  /* liststyle 점이나 목록 없애주는거 */
-  margin: 0;
-  padding: 0;
-}
-
-.header-top .util > li > a {
-  text-decoration: none;
-  color: #1C1C1C;
-  font-size: 12px;
-  transition: color 0.2s;
-  /* hover했을때 자연스럽게 초 0.2초로 설정 */
-}
-
-
-/* 서브메뉴 스타일 연동 */
-/* 언어박스  */
-.lang-menu{
-    position: relative;
-}
-/* 평소에는 서브메뉴 숨기기 */
-.lang-sub {
-    display: none;
-    position: absolute;
-    top: 67%;
-    left: 34px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid #cec9c957;
-    list-style: none;
-    padding: 5px 10px;
-    min-width: 100px;
-    z-index: 100;
-}
-.lang-sub li a {
-    display: block;
-    padding: 10px 12px;
-    color: #1C1C1C;
-    text-align: center;
-    text-decoration: none;
-    /* 링크 글자 없애주는아이! */
-    font-size: 12px;
-}
-
-
-.lang-sub li a:hover {
-    background-color: #be97168e;
-  color: #ffffff;
-
-}
-
-/* 자바스크립트로 is-open 클래스가 붙을 때 */
-.lang-menu.is-open .lang-sub {
-  display: block;
-}
-
-/* header메뉴 전체박스 */
-.header-menu {
-  display: flex;
-  justify-content: center; 
-  margin-top: 20px;
-  padding: 15px 20px;
-}
-
-
-.header-menu .nav {
-  display: flex;
-  gap: 100px; 
-  list-style: none; 
-  margin: 0;
-  padding: 0;
-}
-
-/* 각 메뉴 글자 디자인 */
-.header-menu .nav li a {
-  text-decoration: none;
-  color: #1C1C1C;
-  font-size: 16px;
-  transition: color 0.2s;
-}
-
-
-/* 예약하기 바 전체 박스 */
-.booking-bar {
-  display: flex;
+  /* background-color: rgb(204, 176, 165); */
   align-items: center;
   justify-content: space-between;
-  background-color: #f8f8f8; 
-  padding: 10px 15px;
-  margin-top: 20px;
+  height: 90%px;
+  gap: 10px;
 }
 
-/* 객실/다이닝 둥근 버튼 */
-.booking-tabs {
+.header-R .ut {
   display: flex;
-  background-color: #fff;
-  padding: 4px;
-  border-radius: 30px;
-}
 
-.tab-btn {
-  border: none;
-  background: transparent;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 13px;
-  cursor: pointer;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+  padding: 15px;
 }
-
-/* 활성화된 탭  */
-.tab-btn.active {
-  background-color: #A38A63; /* 신라호텔 브라운/골드 컬러 */
-  color: #fff;
-}
-
-/* 옵션들 (호텔/다이닝/인원) */
-.booking-options {
+.header-R .up li a {
   display: flex;
   align-items: center;
-  gap: 30px;
-  font-size: 13px;
-  color: #333;
+  text-decoration: none;
+  color: #1c1c1c;
+  font-size: 12px;
+}
+/* 좌측상단 */
+
+/* 이미지로 만든 화살표가 흰색이라 검정색으로 교체 */
+.header-ul > li > a img {
+  filter: brightness(0);
+  /* brightness 가 밝기! */
 }
 
-.option-item {
-  display: flex;
+.lang-sub {
+  /* display: flex; */
+  flex-direction: column;
   align-items: center;
-  gap: 110px;
-  cursor: pointer;
-}
-
-/* 맨 오른쪽 예약하기 검은색 버튼 */
-.reserve-btn {
-  background-color: #302425; 
-  color: #fff;
-  border: none;
-  padding: 15px 35px;
-  font-size: 14px;
-  cursor: pointer;
+  width: 90px;
+  padding: 10px;
+  /* left: 20px; */
+  background-color: #f8f8f8;
+  border: 1px solid #1c1c1c;
+  /* display: none;  */
+  /* 나중에 디스플레이 가리기 */
 }
