@@ -1,16 +1,18 @@
 .visual {
   align-items: center;
-  position: relative;
+  position: relative; /* 글씨,이미지 자식들 기준~*/
   width: 100%;
-  aspect-ratio: 16/9;
+  height: 600px;
+  /* aspect-ratio: 16/9; */
   /* max-width: 1280px; */
   min-width: 708px;
-  max-height: 706px;
-  margin: 0 auto; /* ★ 핵심: 화면 정중앙에 오도록 중앙 정렬 추가 */
+  /* max-height: 706px; */
+  margin: 0 auto; /* 화면 정중앙에 오도록 중앙 정렬 추가 */
   /* background-color: rgba(31, 30, 30, 0.219); */
+  overflow: hidden;  /* 이미지가 밖으로 튀어나가지 않게 막아줌 */
 }
 
-.visual video {
+.visual video { 
   position: absolute;
   top: 0;
   left: 0;
@@ -19,45 +21,73 @@
   display: block;
   object-fit: cover;
 }
+/* 이미지와 글씨가 겹쳐서 들어가도록 설정 */
+.visual-inner.swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* 스와이퍼 */
+.swiper-wrapper {
+  display: flex !important;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+/* 개별 슬라이드 박스 (각 슬라이드마다 relative 기준을 줌) */
+.swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
 
-.visual img {
+.visual-inner img {
   display: block;
   width: 100%;
-
-  max-height: 1000px;
-  max-height: 706px;
+  height: 100%;
+  object-fit: cover;
 }
-.visual-inner li {
-  display: block;
-  /* background-color: rgb(27, 148, 148); */
+
+.visual-inner ul {
+/* background-color: rgb(27, 148, 148); */
   position: absolute;
-  top: 45%;
-  left: 35%;
+  top: 50%;
+  left: 50%;
   /*  크기를 줄엿을때 top,left고정...안됨 */
-  padding: 15px auto;
-  margin: 10px auto;
-  
+  transform: translate(-50%, -50%); 
+  /* 이걸로 화면을 확대/축소해도 항상 이미지 정가운데로  고정  */
+  width: 100%;
+  padding: 0 20px;
   text-align: center;
+  z-index: 2;
+
 }
 .visual-inner li {
   color: #fff;
 }
 .visual-inner p {
-  font-size: 16px;
-  margin-bottom: 15px;
+  font-size: 20px;
+  margin-bottom: 35px;
 }
 
 .visual-inner h2 {
-  font-size: 35px;
+  font-size: 55px;
   margin-bottom: 15px;
 }
 
 .visual-inner h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 35px;
+  margin-bottom: 45px;
 }
 
 .visual-inner a {
-  font-size: 14px;
-  margin-bottom: 15px;
+  font-size: 16px;
+  margin-top: 35px;
+  display: inline-block;
+  text-decoration:underline;
+  /* 밑쭐 쫙! */
+  text-underline-offset:  4px;
+  /* 밑줄과 글자 사이 간격  */
 }
+

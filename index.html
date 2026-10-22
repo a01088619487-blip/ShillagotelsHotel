@@ -6,7 +6,13 @@
     <!-- 파비콘 아이콘 넣기 -->
     <link rel="icon" href="images/파비콘아이콘.png" />
     <title>shillagotels</title>
-
+<!-- 스와이퍼 -->
+<!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+    
     <!-- css연결 -->
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -14,7 +20,9 @@
     <link rel="stylesheet" href="css/footer.css" />
 
     <!-- JS -->
-    <link rel="stylesheet" href="js/main.js" />
+     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+  <script src="js/main.js" defer></script>
+    
   </head>
 
   <body>
@@ -91,7 +99,6 @@
               <!-- 메뉴 눌러서 검색창에 인식되게? -->
               <img src="images/images_imoje/position-위치.png" alt="position" />
             </div>
-            <!-- z -->
             <div class="open-but">
               <span class="text">다이닝을 선택해주세요</span>
               <img src="images/images_imoje/dish.png" alt="dish" />
@@ -111,28 +118,199 @@
         </div>
       </div>
       <!-- 비주얼 -->
-      <div class="visual">
-        <!-- 난 비디오 보고 난 다음차례에 배너 로 넘어아게 -->
-        <video autoplay loop muted>
-          <!-- <source src="images/배너 영상.mp4" type="video/mp4"> -->
-        </video>
-        <div class="visual-inner">
-          <img src="images/라이브.jpeg" alt="img">
+<div class="visual">
+  <!-- 비디오 (나중에 사용하려면 주석 해제) -->
+  <video autoplay loop muted>
+    <!-- <source src="images/배너 영상.mp4" type="video/mp4"> -->
+  </video>
+  
+  <!-- Swiper 전체 감싸는 박스 (나중에 클래스명 swiper 추가 예정) -->
+  <div class="visual-inner swiper">
+    <!-- 슬라이드들을 움직이게 감싸는 wrapper (Swiper 필수) -->
+    <div class="swiper-wrapper">
+      
+      <!-- 첫 번째 슬라이드 -->
+      <div class="swiper-slide visual1">
+        <img src="images/라이브.jpeg" alt="img">
+        <ul>
+          <li>
+            <p>제주신라호텔</p>
+            <h2>Wine & Jass Night</h2>
+            <h3>라이브 재즈 공연과 와인 한잔으로 즐기는 낭만 가득한 가을밤</h3>
+            <a href="#">패키지바로가기</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- 두 번째 슬라이드 -->
+      <div class="swiper-slide visual2">
+        <img src="images/바이닐사운드.jpg" alt="img">
+        <ul>
+          <li>
+            <p>서울신라호텔</p>
+            <h2>Vinyl Mood Stay</h2>
+            <h3>바이닐 사운드와 아날로그 감성으로 물드는 특별한밤</h3>
+            <a href="#">패키지바로가기</a>
+          </li>
+        </ul>
+      </div>  
+      
+      <!-- 세 번째 슬라이드 -->
+      <div class="swiper-slide visual3">
+        <img src="images/시그니처.jpg" alt="img">
+        <ul>
+          <li>
+            <p>신라스테이</p>
+            <h2>Own Your Shilla Stay: Travel You Way</h2>
+            <h3>2026년 신라스테이 시그니처 경품 프로모션 'Own Your Shilla Stay 시즌9'</h3>
+            <a href="#">패키지바로가기</a>
+          </li>
+        </ul>
+      </div>
+
+    </div> <!-- // swiper-wrapper 닫기 -->
+  </div> <!-- // visual-inner 닫기 -->
+</div> <!-- // visual 닫기 -->
+      <!-- 메인 -->
+
+
+<!-- 브랜드 소개 섹션 (스와이프) -->
+<div class="brand-section">
+  <div class="brand-inner">
+    
+    <!-- 왼쪽: 스와이프 슬라이드 영역 -->
+    <div class="brand-left swiper brand-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/큰3.png" alt="image 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/큰2.png" alt="image 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/큰1.png" alt="image 1">
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- 오른쪽: 텍스트 및 브랜드 정보 영역 -->
+    <div class="brand-right">
+      <div class="brand-content2">
+        <span class="sub-title">OUR BRAND</span>
+        <h2 class="brand-title">SHILLA STAY</h2>
+        
+        <div class="brand-thumb">
+          <img src="images/작은거2.png" alt="thumbnail">
+        </div>
+        
+        <p class="brand-desc">
+          합리적이면서도 감각적인 머무름을 제공하는 프리미엄 비즈니스 호텔 브랜드입니다.<br>
+          주요 도심의 중심지와 관광 명소 인근에 위치하여 비즈니스와 휴양을 아우르는 최적의 환경을 선사합니다.
+        </p>
+      </div>
+      <div class="brand-content1">
+        <span class="sub-title">OUR BRAND</span>
+        <h2 class="brand-title">SHILLA STAY</h2>
+        
+        <div class="brand-thumb">
+          <img src="images/작은거3.png" alt="thumbnail">
+        </div>
+        
+        <p class="brand-desc">
+          합리적이면서도 감각적인 머무름을 제공하는 프리미엄 비즈니스 호텔 브랜드입니다.<br>
+          주요 도심의 중심지와 관광 명소 인근에 위치하여 비즈니스와 휴양을 아우르는 최적의 환경을 선사합니다.
+        </p>
+      </div>
+      <div class="brand-content3">
+        <span class="sub-title">OUR BRAND</span>
+        <h2 class="brand-title">SHILLA STAY</h2>
+        
+        <div class="brand-thumb">
+          <img src="images/작은거1.png" alt="thumbnail">
+        </div>
+        
+        <p class="brand-desc">
+          합리적이면서도 감각적인 머무름을 제공하는 프리미엄 비즈니스 호텔 브랜드입니다.<br>
+          주요 도심의 중심지와 관광 명소 인근에 위치하여 비즈니스와 휴양을 아우르는 최적의 환경을 선사합니다.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      <!-- 하단 -->
+<footer class="footer">
+  <div class="inner">
+    <!-- upper: 상단 3대 브랜드 로고 -->
+    <div class="upper">
+      <h1><a href="#">THESHILLA</a></h1>
+      <h1><a href="#">SHILLA MONOGRAM</a></h1>
+      <h1><a href="#">SHILLA STAY</a></h1>
+    </div>
+
+    <!-- footer-bottom: 링크 목록 및 회사 정보 영역 -->
+    <div class="footer-bottom">
+      
+      <!-- 좌측: 회사 주소 및 정보, 인증마크, 카피라이트 -->
+      <div class="footer-info">
+        <address>
+          (주)호텔신라 서울특별시 중구 동호로 249(우:04605) 대표이사 이부진<br/>
+          사업자등록번호 203-81-43363 통신판매신고번호 중구 00272호 
+          <button type="button" class="lower-btn">사업자정보확인</button><br/>
+          호스팅서비스제공자 삼성SDS(주)
+        </address>
+
+        <div class="isms-area">
+          <img src="images/인증범위(주)호텔신라 로고.png" alt="isms">
+          <p>
+            인증범위 (주)호텔신라 호텔 인터넷 홈페이지 서비스<br/>
+            유효기간 2023.12.20 ~ 2026.12.19
+          </p>
+        </div>
+
+        <p class="copy">Copyright &copy; HOTEL SHILLA CO.,LTD. All Rights Reserved.</p>
+      </div>
+
+      <!-- 우측: 관련 링크 메뉴들 & SNS 아이콘 -->
+      <div class="footer-menu-wrap">
+        <div class="dawnper">
           <ul>
-            <li>
-              <p>제주신라호텔</p>
-              <h2>Wine & Jass Night</h2>
-              <h3>라이브 재즈 공연과 와인 한잔으로 즐기는 낭만 가득한 가을밤</h3>
-              <a href="#">패키지바로가기</a>
-            </li>
+            <li><a href="#">호텔신라소개</a></li>
+            <li><a href="#">호텔개발</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">호텔별 연락처</a></li>
+            <li><a href="#">윤리경영(부정제보)</a></li>
+            <li><a href="#">사이트맵</a></li>
           </ul>
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">신라리워즈 약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이메일무단수집금지</a></li>
+            <li><a href="#">건축·시설물 안전관리</a></li>
+            <li><a href="#">영상정보처리기기운영·관리방침</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">The Shilla shop</a></li>
+            <li><a href="#">삼성 상품권</a></li>
+          </ul>
+        </div>
+
+        <!-- 우측 하단 SNS 아이콘 -->
+        <div class="sns-list">
+          <a href="#"><img src="images/images_imoje/Instagram.png" alt="insta"></a>
+          <a href="#"><img src="images/images_imoje/facebook.png" alt="facebook"></a>
+          <a href="#"><img src="images/images_imoje/youtube.png" alt="youtube"></a>
+          <a href="#"><img src="images/images_imoje/chatting.png" alt="chatting"></a>
         </div>
       </div>
 
-
-
-      <!-- 메인 -->
-      <!-- 하단 -->
+    </div>
+  </div>
+</footer>
     </div>
   </body>
 </html>

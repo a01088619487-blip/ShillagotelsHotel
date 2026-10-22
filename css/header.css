@@ -126,6 +126,11 @@ img {
   /* 나중에 디스플레이 가리기 */
   position: absolute;
   font-size: 12px;
+
+}
+.lang-menu.active .lang-sub {
+  display: flex;
+  z-index: 9999;
 }
 /* 메뉴 */
 .nav {
