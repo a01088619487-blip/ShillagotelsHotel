@@ -10,7 +10,6 @@ ul,
 li {
   list-style: none;
   color: #1c1c1c;
-
 }
 
 /* a리셋 */
@@ -18,7 +17,6 @@ a {
   text-decoration: none;
   color: inherit;
   /* inherit 색 부모 따라가긔 */
-
 }
 
 img {
@@ -29,14 +27,28 @@ img {
 /* 상단 */
 .header {
   width: 100%;
-  background-color: rgb(215, 226, 226);
+
+  /* background-color: rgb(215, 226, 226); */
 }
 
 .header .inner {
-  min-width: 779x;
-  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* 로고의 절대 위치 기준점 잡아주기 */
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 15px 10px;
+}
+
+/* .header-RL  */
+.header-L {
+  display: flex;
+  align-items: center;
+}
+.header-R {
+  display: flex;
+  align-items: center;
 }
 .home-link {
   display: flex;
@@ -52,24 +64,19 @@ img {
   margin-top: 3px;
 }
 /* 지구화살표이미지 */
-.lang-btn img{
+.lang-btn img {
   width: 14px;
   height: 14px;
 }
 
 /* 좌측 상단*/
 .header-L {
-  display: flex;
-  /* background-color: rgb(204, 176, 165); */
-  align-items: center;
-  justify-content: space-between;
-  height: 90%px;
-  gap: 10px;
+  gap: 0px;
 }
 
 .header-ul {
   display: flex;
-
+  flex-direction: row;
   align-items: center;
   gap: 16px;
   margin: 10px;
@@ -78,6 +85,7 @@ img {
 }
 .header .up li a {
   display: flex;
+
   align-items: center;
   text-decoration: none;
   color: #1c1c1c;
@@ -91,12 +99,11 @@ img {
   transform: translateX(-50%);
 }
 
-/* 우측상단 */
+/* 우측상단  아이콘과 글자 사이 간격 */
 .lang-btn {
   display: flex;
   align-items: center;
-  gap: 3px; /* 아이콘과 글자 사이 간격 */
-  text-decoration: none;
+  gap: 3px;
   font-size: 12px;
 }
 /* 이미지로 만든 화살표가 흰색이라 검정색으로 교체 */
@@ -111,11 +118,10 @@ img {
   flex-direction: column;
   align-items: center;
   width: 90px;
-  padding: 10px;
+  /* padding: 10px; */
   right: 1px;
   background-color: #f8f8f8;
   border: 1px solid #1c1c1c;
-
   display: none;
   /* 나중에 디스플레이 가리기 */
   position: absolute;
@@ -128,8 +134,92 @@ img {
   align-items: center;
   gap: 80px;
   font-size: 18px;
+  margin: 25px;
+}
+.lang-sub li {
+  width: 100%;
+  text-align: center;
+  padding: 1px;
+}
+.lang-sub li a {
+  background-color: #e6e2dd25;
+
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+}
+.lang-sub li:hover a {
+  background-color: #a38a638a;
+  color: #f8f8f8;
 }
 
-.lang-sub:hover{
+/* 예약하기 바 전체박스 */
+.reservation {
   display: flex;
+  max-width: 1200px;
+  background-color: #f8f8f8;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+  margin: 10px auto 0 auto;
+}
+.rsr-bor {
+  display: flex;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 25px;
+}
+
+.rsr-Btn {
+  border: none;
+  background: transparent;
+  /* transparent두개를 한개처럼 보이게 */
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/* 선택시 컬러바뀌게 */
+.rsr-Bun.active {
+  background-color: #2517008a;
+  color: #fff;
+}
+
+/* 호텔 다이닝 예약하기  */
+.open {
+  display: flex;
+  align-items: center;
+  color: #1c1c1c;
+}
+.open span {
+  display: flex;
+  /* background-color: aquamarine; */
+  padding-right: 15px;
+  align-items: center;
+}
+
+.open-but {
+  display: flex;
+  border: none;
+  align-items: center;
+  background: transparent;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.open-but img {
+  width: 18px;
+  height: 18px;
+}
+
+.reservation-btn {
+  
+  display: flex;
+  background-color: #2517008a;
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
 }

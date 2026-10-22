@@ -1,0 +1,63 @@
+.visual {
+  align-items: center;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  /* max-width: 1280px; */
+  min-width: 708px;
+  max-height: 706px;
+  margin: 0 auto; /* ★ 핵심: 화면 정중앙에 오도록 중앙 정렬 추가 */
+  /* background-color: rgba(31, 30, 30, 0.219); */
+}
+
+.visual video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.visual img {
+  display: block;
+  width: 100%;
+
+  max-height: 1000px;
+  max-height: 706px;
+}
+.visual-inner li {
+  display: block;
+  /* background-color: rgb(27, 148, 148); */
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  /*  크기를 줄엿을때 top,left고정...안됨 */
+  padding: 15px auto;
+  margin: 10px auto;
+  
+  text-align: center;
+}
+.visual-inner li {
+  color: #fff;
+}
+.visual-inner p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.visual-inner h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.visual-inner h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.visual-inner a {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
