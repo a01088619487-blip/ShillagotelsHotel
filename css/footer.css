@@ -73,16 +73,26 @@ text-decoration: none;
   gap: 30px;
 
 }
+
 .dawnper {
   /* display: flex; */
   justify-content: space-between;
   background-color: #2A1F20;
 }
+.sns-list{
+  display: flex;        
+  list-style: none;
+  justify-content: flex-end;
+  padding:10px;
+  margin: 0;
+  gap: 30px;
+}
+
 
 .dawnper ul {
   display: flex;        
-  flex-direction: column; /* ul 안의 li들은 세로로 떨어지게 설정 */
   list-style: none;
+  justify-content: flex-end;
   padding: 0;
   margin: 0;
 }

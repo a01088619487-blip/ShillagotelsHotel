@@ -23,12 +23,19 @@ img {
   /* width: 100%; */
   display: block;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 /* 상단 */
 .header {
   width: 100%;
-
-  /* background-color: rgb(215, 226, 226); */
+    background-color: rgb(255, 255, 255);
+    /* position: fixed;  */
+    position: sticky;
+    top: 0;
+    /* 상단바 고정 */
+    z-index: 9999;
+    
 }
 
 .header .inner {
@@ -38,7 +45,7 @@ img {
   position: relative; /* 로고의 절대 위치 기준점 잡아주기 */
   max-width: 1280px;
   margin: 0 auto;
-  padding: 15px 10px;
+  padding: 4px 10px;
 }
 
 /* .header-RL  */
@@ -158,6 +165,27 @@ img {
   color: #f8f8f8;
 }
 
+/* go top */
+#goTop{
+   /* 첫 스크롤 0에서는  */
+   display: none;
+  position: fixed; /* 스크롤 움직여도 고정하는것 */
+  bottom: 30px;
+  right: 38px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 0;
+  /* 버튼자체라 0  을줫당*/
+  padding: 10px;
+  background-color: #a38a638a;
+  color: #1c1c1c;
+  cursor: pointer;
+  font-size: 15px;
+}
+#goTop.active{
+display: flex;
+}
+
 /* 예약하기 바 전체박스 */
 .reservation {
   display: flex;
@@ -184,6 +212,9 @@ img {
   font-size: 14px;
   cursor: pointer;
 }
+.rsr-bor .D{
+   background-color: #2517008a;
+}
 /* 선택시 컬러바뀌게 */
 .rsr-Bun.active {
   background-color: #2517008a;
@@ -202,6 +233,11 @@ img {
   padding-right: 15px;
   align-items: center;
 }
+.open-but .text{
+  margin: 0 60px;
+  /* background-color: aqua; */
+  cursor: default;
+}
 
 .open-but {
   display: flex;
@@ -212,6 +248,7 @@ img {
   border-radius: 20px;
   font-size: 14px;
   cursor: pointer;
+  
 }
 .open-but img {
   width: 18px;
